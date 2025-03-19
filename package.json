@@ -1,9 +1,10 @@
 {
   "name": "nestjs-solr",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Solr client for Nestjs",
   "main": "dist/index.js",
   "scripts": {
+    "build": "nest build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,13 +16,13 @@
     "solr"
   ],
   "author": "dkduyanh",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dkduyanh/nestjs-solr/issues"
   },
   "homepage": "https://github.com/dkduyanh/nestjs-solr#readme",
   "peerDependencies": {
-    "@nestjs/common": "^9.0.0 || ^10.0.0",
+    "@nestjs/common": "^9.0.0 || ^10.0.0 || ^11.0.0",
     "solr-client": "^0.10.0-rc10"
   }
 }
