@@ -15,7 +15,7 @@ npm install nestjs-solr
 Register `SolrModule`:
 
 ```typescript
-import { SolrModule } from 'nest-solr';
+import { SolrModule } from 'nestjs-solr';
 
 @Module({
   imports: [
@@ -33,7 +33,7 @@ export class AppModule {}
 Inject `SolrService`:
 
 ```typescript
-import { SolrService } from 'nest-solr';
+import { SolrService } from 'nestjs-solr';
 
 @Injectable()
 export class SearchService {
@@ -43,7 +43,8 @@ export class SearchService {
 
 ### Options for Basic Authentication combined with a self-signed certificate (TLS)
 ```typescript
-import { SolrModule } from 'nest-solr';
+import { SolrModule } from 'nestjs-solr';
+import * as fs from 'node:fs';
 
 @Module({
   imports: [
@@ -78,7 +79,6 @@ export class AppModule {}
       useFactory: async (configService: ConfigService) => ({
         host: configService.get('SOLR_HOST'),
         port: configService.get('SOLR_PORT'),
-        secure: configService.get('SOLR_SECURE'),
         core: 'mycore',
       }),
       inject: [ConfigService],
